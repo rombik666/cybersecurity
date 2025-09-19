@@ -82,15 +82,15 @@
 
 ### НС-1: Подмена/искажение команды по сети (нарушение ЦБ1, ЦБ2)
 
-![6](images/ns1_mitm_command.png)
+![6](images/negative1.png)
 
 ### НС-2: Перегрузка обмена (DoS) — нарушение ЦБ5
 
-![7](images/ns2_dos.png)
+![7](images/negative2.png)
 
 ### НС-3: Попытка установить неподписанную ПП — нарушение ЦБ4
 
-![8](images/ns3_invalid_update.png)
+![8](images/negative3.png)
 
 ## Политика архитектуры
 
