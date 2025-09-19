@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.3">
+  <diagram id="plc-context-bw" name="Context (BW)">
+    <mxGraphModel dx="1289" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor_op" value="Оператор АРМ (SCADA)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="520" y="80" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_eng" value="Инженер по автоматизации" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="420" y="230" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_scada" value="АСУ ТП (SCADA/серверы)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontStyle=1;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="730" y="20" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_repo" value="Репозиторий ПП / проекта" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="550" y="380" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_plc" value="ПЛК" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontStyle=1;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="760" y="210" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_field" value="Полевые устройства&#xa;(датчики / исполнители)" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="1120" y="210" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_lic" value="Лицензионный сервер / ключ" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;fontColor=#000000" parent="1" vertex="1">
+          <mxGeometry x="1060" y="60" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e_op_scada" value="управление/просмотр" style="endArrow=block;html=1;strokeColor=#000000;fontColor=#000000;dashed=1" parent="1" source="actor_op" target="sys_scada" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_scada_plc" value="данные/команды" style="endArrow=block;startArrow=block;html=1;strokeColor=#000000;fontColor=#000000" parent="1" source="sys_scada" target="sys_plc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_plc_field" value="сигналы/исполнение" style="endArrow=block;startArrow=block;html=1;strokeColor=#000000;fontColor=#000000" parent="1" source="sys_plc" target="sys_field" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_eng_plc" value="прошивка/конфиг/диагностика" style="endArrow=block;startArrow=block;html=1;strokeColor=#000000;fontColor=#000000;dashed=1" parent="1" source="actor_eng" target="sys_plc" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_eng_repo" value="исходники/артефакты" style="endArrow=block;startArrow=block;html=1;strokeColor=#000000;fontColor=#000000;dashed=1" parent="1" source="actor_eng" target="sys_repo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_plc_lic" value="лицензия: проверка/активация" style="endArrow=block;startArrow=block;html=1;strokeColor=#000000;fontColor=#000000" parent="1" source="sys_plc" target="sys_lic" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_plc_mon" value="журнал/события" style="endArrow=block;html=1;strokeColor=#000000;fontColor=#000000;entryX=0;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="sys_plc" target="xa_uPSbhkjVh8-eVhKjX-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1421.3513513513512" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xa_uPSbhkjVh8-eVhKjX-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="430" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
